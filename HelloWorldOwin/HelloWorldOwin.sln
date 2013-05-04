@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldOwin", "HelloWorldOwin\HelloWorldOwin.csproj", "{251DDA41-B0AF-4139-953B-E4B84B18B1D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2204B0B2-4164-4C87-A604-109A158A065D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldOwin.Host", "HelloWorldOwin.Host\HelloWorldOwin.Host.csproj", "{562A844B-D5F2-4134-A206-778944336F4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{251DDA41-B0AF-4139-953B-E4B84B18B1D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251DDA41-B0AF-4139-953B-E4B84B18B1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251DDA41-B0AF-4139-953B-E4B84B18B1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251DDA41-B0AF-4139-953B-E4B84B18B1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562A844B-D5F2-4134-A206-778944336F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562A844B-D5F2-4134-A206-778944336F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562A844B-D5F2-4134-A206-778944336F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562A844B-D5F2-4134-A206-778944336F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
