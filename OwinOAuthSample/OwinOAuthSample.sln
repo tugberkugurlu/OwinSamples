@@ -14,6 +14,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9E5CB9
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthorizationServer", "AuthorizationServer", "{46DAE91B-6A4B-48CC-AE6E-C686AB9276CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResourceServer", "ResourceServer", "{78A800C5-0A1A-4C80-9445-7ACE2F929554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsGallery.ResourceServer.Web", "src\CarsGallery.ResourceServer.Web\CarsGallery.ResourceServer.Web.csproj", "{7C7EBB95-9002-43D7-B789-4DBBCAEDABD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,8 +34,16 @@ Global
 		{D19095D4-269C-41B5-8954-F5BCE6FF8898}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D19095D4-269C-41B5-8954-F5BCE6FF8898}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D19095D4-269C-41B5-8954-F5BCE6FF8898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7EBB95-9002-43D7-B789-4DBBCAEDABD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7EBB95-9002-43D7-B789-4DBBCAEDABD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7EBB95-9002-43D7-B789-4DBBCAEDABD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7EBB95-9002-43D7-B789-4DBBCAEDABD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{199B838A-5A76-4B76-86FA-F59EE205049F} = {46DAE91B-6A4B-48CC-AE6E-C686AB9276CB}
+		{7C7EBB95-9002-43D7-B789-4DBBCAEDABD6} = {78A800C5-0A1A-4C80-9445-7ACE2F929554}
 	EndGlobalSection
 EndGlobal

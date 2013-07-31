@@ -84,6 +84,19 @@ namespace CarsGallery.Clien.Web.Controllers
             }
         }
 
+        private async Task<IEnumerable<Car>> GetCarsThroughAuthCode()
+        {
+            // Authorization Code Grant http://tools.ietf.org/html/rfc6749#section-4.1
+
+            // Flow steps:
+            // * Authorization Request
+            // * Retrieve the auth code on the redirected endpoint
+            // * Use the auth code to get the access_token
+            // * Get the access_token on the same redirected endpoint
+
+            throw new NotImplementedException();
+        }
+
         private static string EncodeToBase64(string value)
         {
 
