@@ -37,6 +37,24 @@ namespace OAuth.Server
 
         // Provider methods
 
+        private Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
+        {
+            string clientId;
+            string clientSecret;
+            if (context.TryGetBasicCredentials(out clientId, out clientSecret))
+            {
+                // Validate the credentials here
+                bool isValid = true;
+
+                if (isValid)
+                {
+                    context.Validated();
+                }
+            }
+
+            return Task.FromResult(0);
+        }
+
         // Helpers
 
         private static X509Certificate2 GetSigningCertificate()
