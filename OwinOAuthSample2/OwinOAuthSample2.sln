@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth.Server", "src\OAuth.Server\OAuth.Server.csproj", "{43932D56-EE68-454A-B8D8-7F9CE9771167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth.Server.Core", "src\OAuth.Server.Core\OAuth.Server.Core.csproj", "{BE063CFD-4202-40B3-8BBD-6C64C45AEC42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{6858B68B-FB02-43BC-89CB-CED4601DAF1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{664B2196-3046-4354-BC3A-DD51082B2217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth.Application.Web", "OAuth.Application.Web\OAuth.Application.Web.csproj", "{1E42EE93-976B-483A-8B1D-39D9ED000172}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{091F36AE-2618-4382-827D-932C8FEE8690}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43932D56-EE68-454A-B8D8-7F9CE9771167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43932D56-EE68-454A-B8D8-7F9CE9771167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43932D56-EE68-454A-B8D8-7F9CE9771167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43932D56-EE68-454A-B8D8-7F9CE9771167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE063CFD-4202-40B3-8BBD-6C64C45AEC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE063CFD-4202-40B3-8BBD-6C64C45AEC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE063CFD-4202-40B3-8BBD-6C64C45AEC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE063CFD-4202-40B3-8BBD-6C64C45AEC42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E42EE93-976B-483A-8B1D-39D9ED000172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E42EE93-976B-483A-8B1D-39D9ED000172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E42EE93-976B-483A-8B1D-39D9ED000172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E42EE93-976B-483A-8B1D-39D9ED000172}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E42EE93-976B-483A-8B1D-39D9ED000172} = {6858B68B-FB02-43BC-89CB-CED4601DAF1A}
+	EndGlobalSection
+EndGlobal
