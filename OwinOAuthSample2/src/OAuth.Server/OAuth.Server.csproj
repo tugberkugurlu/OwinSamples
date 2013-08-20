@@ -66,6 +66,7 @@
     <Compile Include="AppConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="TokenTypes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
