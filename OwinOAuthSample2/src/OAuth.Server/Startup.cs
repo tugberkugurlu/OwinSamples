@@ -129,7 +129,6 @@ namespace OAuth.Server
             X509Certificate2 signingCert = store.Certificates[0];
             store.Close();
 
-            // We only need the public key of the certificate
             return signingCert;
         }
     }
