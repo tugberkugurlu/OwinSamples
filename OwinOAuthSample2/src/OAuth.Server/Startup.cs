@@ -1,18 +1,17 @@
 ﻿using Microsoft.Owin;
-using Microsoft.Owin.Security.Infrastructure;
 using Microsoft.Owin.Security.Jwt;
 using Microsoft.Owin.Security.OAuth;
 using OAuth.Server;
+using OAuth.Server.Providers;
+using OAuth.Server.Providers.OAuth;
 using Owin;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Metadata;
 using System.IdentityModel.Protocols.WSTrust;
 using System.IdentityModel.Tokens;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 [assembly: OwinStartup(typeof(Startup))]
@@ -46,38 +45,10 @@ namespace OAuth.Server
                 ApplicationCanDisplayErrors = true,
                 AccessTokenFormat = new JwtFormat(new X509CertificateSigningCredentialsProvider(AppConstants.Issuer, GetSigningCertificate())),
 
-                Provider = new OAuthAuthorizationServerProvider 
-                {
-                },
-
-                AuthorizationCodeProvider = new AuthenticationTokenProvider
-                {
-                },
-
-                RefreshTokenProvider = new AuthenticationTokenProvider
-                {
-                }
+                Provider = new AuthorizationServerProvider(),
+                AuthorizationCodeProvider = new AuthorizationCodeProvider(),
+                RefreshTokenProvider = new RefreshTokenProvider()
             });
-        }
-
-        // Provider methods
-
-        private Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
-        {
-            string clientId;
-            string clientSecret;
-            if (context.TryGetBasicCredentials(out clientId, out clientSecret))
-            {
-                // Validate the credentials here
-                bool isValid = true;
-
-                if (isValid)
-                {
-                    context.Validated();
-                }
-            }
-
-            return Task.FromResult(0);
         }
 
         // Helpers
@@ -130,27 +101,6 @@ namespace OAuth.Server
             store.Close();
 
             return signingCert;
-        }
-    }
-
-    public class X509CertificateSigningCredentialsProvider : ISigningCredentialsProvider
-    {
-        private readonly SigningCredentials _signingCredentials;
-        private readonly string _issuer;
-
-        public SigningCredentials SigningCredentials { get { return _signingCredentials; } }
-        public string Issuer { get { return _issuer; } }
-        
-
-        public X509CertificateSigningCredentialsProvider(string issuer, X509Certificate2 signingCert)
-        {
-            _signingCredentials = new X509SigningCredentials(signingCert);
-            _issuer = issuer;
-        }
-
-        public IEnumerable<SecurityToken> SecurityTokens
-        {
-            get { throw new NotSupportedException(); }
         }
     }
 }

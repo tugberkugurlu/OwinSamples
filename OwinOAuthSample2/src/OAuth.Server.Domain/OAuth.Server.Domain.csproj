@@ -57,6 +57,7 @@
     <Compile Include="Entities\Scope.cs" />
     <Compile Include="Enums\ApplicationStatus.cs" />
     <Compile Include="Enums\OAuthFlow.cs" />
+    <Compile Include="Managers\IAuthorizationServerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
