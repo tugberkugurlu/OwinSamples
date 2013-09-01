@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Microsoft.Owin;
+using Owin;
 using System.Threading.Tasks;
 
 namespace OwinIoCContainerSample.Middlewares

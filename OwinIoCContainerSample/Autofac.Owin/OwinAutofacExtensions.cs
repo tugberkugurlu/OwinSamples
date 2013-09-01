@@ -1,15 +1,15 @@
 ﻿using Autofac;
-using Microsoft.Owin;
-using Owin;
-using OwinIoCContainerSample.Middlewares;
+using Autofac.Owin;
+using Autofac.Owin.Middlewares;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace OwinIoCContainerSample
+namespace Owin
 {
     using AppFunc = Func<IDictionary<string, object>, Task>;
 
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
     public static class OwinAutofacExtensions
     {
         public static IAppBuilder UseAutofac(this IAppBuilder app, IContainer container)
@@ -26,11 +26,6 @@ namespace OwinIoCContainerSample
             }
 
             return null;
-        }
-
-        public static ILifetimeScope GetRequestDependencyScope(this IOwinContext owinContext) 
-        {
-            return owinContext.Environment.GetRequestDependencyScope();
         }
     }
 }

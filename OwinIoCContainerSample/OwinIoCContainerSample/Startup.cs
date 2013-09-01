@@ -3,9 +3,6 @@ using Microsoft.Owin;
 using Owin;
 using OwinIoCContainerSample;
 using OwinIoCContainerSample.Middlewares;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 [assembly: OwinStartup(typeof(Startup))]
 namespace OwinIoCContainerSample

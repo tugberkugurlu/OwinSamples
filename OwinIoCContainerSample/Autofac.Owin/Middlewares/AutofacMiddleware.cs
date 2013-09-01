@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace OwinIoCContainerSample.Middlewares
+namespace Autofac.Owin.Middlewares
 {
     using Autofac;
     using AppFunc = Func<IDictionary<string, object>, Task>;
 
     public class AutofacMiddleware
     {
+        /// <summary>
+        /// Tag used to identify registrations that are scoped to the OWIN request level.
+        /// </summary>
+        private const string OwinRequestTag = "AutofacOwinRequest";
         private readonly AppFunc _nextFunc;
         private readonly IContainer _container;
 
@@ -20,7 +24,7 @@ namespace OwinIoCContainerSample.Middlewares
 
         public async Task Invoke(IDictionary<string, object> env)
         {
-            using (ILifetimeScope scope = _container.BeginLifetimeScope())
+            using (ILifetimeScope scope = _container.BeginLifetimeScope(OwinRequestTag))
             {
                 env.Add(Constants.AutofacDependencyScopeEnvironmentKey, scope);
                 await _nextFunc(env);

@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C035E
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Owin", "Autofac.Owin\Autofac.Owin.csproj", "{3395CB35-32BA-40EE-B838-FDD7F00BF900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Owin.WebApi", "Autofac.Owin.WebApi\Autofac.Owin.WebApi.csproj", "{FC5FB15D-F50E-47CD-A7AE-7A98BAEFE0BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +26,14 @@ Global
 		{27D21CF4-4530-4B18-971B-726585B5B650}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27D21CF4-4530-4B18-971B-726585B5B650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27D21CF4-4530-4B18-971B-726585B5B650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3395CB35-32BA-40EE-B838-FDD7F00BF900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3395CB35-32BA-40EE-B838-FDD7F00BF900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3395CB35-32BA-40EE-B838-FDD7F00BF900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3395CB35-32BA-40EE-B838-FDD7F00BF900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC5FB15D-F50E-47CD-A7AE-7A98BAEFE0BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5FB15D-F50E-47CD-A7AE-7A98BAEFE0BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5FB15D-F50E-47CD-A7AE-7A98BAEFE0BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5FB15D-F50E-47CD-A7AE-7A98BAEFE0BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 ﻿
-namespace OwinIoCContainerSample
+namespace Autofac.Owin
 {
     public static class Constants
     {
