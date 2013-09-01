@@ -65,6 +65,10 @@
   <ItemGroup>
     <Compile Include="AppConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\OAuth\AuthorizationCodeProvider.cs" />
+    <Compile Include="Providers\OAuth\AuthorizationServerProvider.cs" />
+    <Compile Include="Providers\OAuth\RefreshTokenProvider.cs" />
+    <Compile Include="Providers\X509CertificateSigningCredentialsProvider.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="TokenTypes.cs" />
   </ItemGroup>
