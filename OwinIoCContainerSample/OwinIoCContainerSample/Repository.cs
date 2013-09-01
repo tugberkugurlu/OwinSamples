@@ -30,6 +30,11 @@ namespace OwinIoCContainerSample
             return __randomTexts.ElementAt(new Random().Next(__randomTexts.Count()));
         }
 
+        public IEnumerable<string> GetTexts()
+        {
+            return __randomTexts;
+        }
+
         public void Dispose()
         {
             Console.WriteLine("Foo dispose");
