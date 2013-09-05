@@ -35,12 +35,13 @@
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.3.1.1\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac.Integration.WebApi">
-      <HintPath>..\packages\Autofac.WebApi.3.1.0\lib\net40\Autofac.Integration.WebApi.dll</HintPath>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.WebApi5.3.0.0-rc1\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Owin.2.0.1-rtw1-20901-601-dev\lib\net45\Microsoft.Owin.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Owin.2.0.0-rc1\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -74,19 +75,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Autofac.Owin.WebApi\Autofac.Owin.WebApi.csproj">
-      <Project>{fc5fb15d-f50e-47cd-a7ae-7a98baefe0ba}</Project>
-      <Name>Autofac.Owin.WebApi</Name>
+    <ProjectReference Include="..\Owin.Dependencies.Adapters.WebApi\Owin.Dependencies.Adapters.WebApi.csproj">
+      <Project>{f1abe80c-cfce-40e5-bb54-ef0b9cd5c127}</Project>
+      <Name>Owin.Dependencies.Adapters.WebApi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Autofac.Owin\Autofac.Owin.csproj">
-      <Project>{3395cb35-32ba-40ee-b838-fdd7f00bf900}</Project>
-      <Name>Autofac.Owin</Name>
+    <ProjectReference Include="..\Owin.Dependencies.Autofac\Owin.Dependencies.Autofac.csproj">
+      <Project>{95885b15-f24b-4a49-b31a-cffac62ed2c7}</Project>
+      <Name>Owin.Dependencies.Autofac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Owin.Dependencies\Owin.Dependencies.csproj">
+      <Project>{e1e4b973-5577-47c3-8419-f5c7e521a7b7}</Project>
+      <Name>Owin.Dependencies</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,5 @@
-﻿using Autofac;
-using Microsoft.Owin;
-using Owin;
+﻿using Microsoft.Owin;
+using Owin.Dependencies;
 using System.Threading.Tasks;
 
 namespace OwinIoCContainerSample.Middlewares
@@ -14,10 +13,10 @@ namespace OwinIoCContainerSample.Middlewares
 
         public override async Task Invoke(IOwinContext context)
         {
-            if (context.Request.Path == new PathString("/random"))
+            if (context.Request.Path == "/random")
             {
-                ILifetimeScope dependencyScope = context.GetRequestDependencyScope();
-                IRepository repository = dependencyScope.Resolve<IRepository>();
+                IOwinDependencyScope dependencyScope = context.GetRequestDependencyScope();
+                IRepository repository = dependencyScope.GetService(typeof(IRepository)) as IRepository;
                 await context.Response.WriteAsync(repository.GetRandomText());
             }
             else
