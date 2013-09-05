@@ -3,6 +3,7 @@ using Microsoft.Owin;
 using Owin;
 using OwinIoCContainerSample;
 using OwinIoCContainerSample.Middlewares;
+using System.Web.Http;
 
 [assembly: OwinStartup(typeof(Startup))]
 namespace OwinIoCContainerSample
@@ -12,9 +13,12 @@ namespace OwinIoCContainerSample
         public void Configuration(IAppBuilder app)
         {
             IContainer container = RegisterServices();
+            HttpConfiguration config = new HttpConfiguration();
+            config.Routes.MapHttpRoute("DefaultHttpRoute", "api/{controller}");
 
             app.UseAutofac(container)
-               .Use<RandomTextMiddleware>();
+               .Use<RandomTextMiddleware>()
+               .UseWebApiWithAutofac(container, config);
         }
 
         public IContainer RegisterServices()
