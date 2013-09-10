@@ -5,6 +5,15 @@ VisualStudioVersion = 12.0.20827.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin.Logging.Adapters.WebApi", "Owin.Logging.Adapters.WebApi\Owin.Logging.Adapters.WebApi.csproj", "{90A12A76-F2C0-4B36-AB01-0ED4CE843E98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin.Logging.Adapters.WebApi.Sample", "Owin.Logging.Adapters.WebApi.Sample\Owin.Logging.Adapters.WebApi.Sample.csproj", "{530F6F10-A24C-4A74-B902-BC495B7FD459}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3410EE43-FB25-446C-AF70-DBDBD9D8A10D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,10 @@ Global
 		{90A12A76-F2C0-4B36-AB01-0ED4CE843E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90A12A76-F2C0-4B36-AB01-0ED4CE843E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90A12A76-F2C0-4B36-AB01-0ED4CE843E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530F6F10-A24C-4A74-B902-BC495B7FD459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530F6F10-A24C-4A74-B902-BC495B7FD459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530F6F10-A24C-4A74-B902-BC495B7FD459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530F6F10-A24C-4A74-B902-BC495B7FD459}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
