@@ -66,6 +66,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logging\ConsoleLogger.cs" />
+    <Compile Include="Logging\ConsoleLoggerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
