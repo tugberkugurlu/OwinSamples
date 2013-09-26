@@ -11,7 +11,7 @@ namespace OwinDiagnosticsSample
     {
         public void Configuration(IAppBuilder app)
         {
-            app.UseWelcomePage();
+            // app.UseWelcomePage();
             app.UseErrorPage();
             app.Use((ctx, next) => 
             {
